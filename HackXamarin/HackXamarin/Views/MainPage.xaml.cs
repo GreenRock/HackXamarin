@@ -7,9 +7,9 @@ using Xamarin.Forms;
 
 namespace HackXamarin.Views
 {
-    public partial class ItemsPage : ContentPage
+    public partial class MainPage : ContentPage
     {
-        public ItemsPage()
+        public MainPage()
         {
             InitializeComponent();
         }

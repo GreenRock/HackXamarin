@@ -27,7 +27,7 @@ namespace HackXamarin
             {
                 Children =
                 {
-                    new NavigationPage(new ItemsPage())
+                    new NavigationPage(new MainPage())
                     {
                         Title = "Browse",
                         Icon = Device.OnPlatform("tab_feed.png",null,null)
@@ -43,7 +43,7 @@ namespace HackXamarin
 
         protected override void OnInitialized()
         {
-            NavigationService.NavigateAsync("Navigation/ItemsPage");
+            NavigationService.NavigateAsync("Navigation/MainPage");
         }
 
         protected override void RegisterTypes()
@@ -51,8 +51,8 @@ namespace HackXamarin
             Container.RegisterType(typeof(IDataStore<Item>), typeof(MockDataStore), new ContainerControlledLifetimeManager());
 
             Container.RegisterTypeForNavigation<NavigationPage>("Navigation");
-            Container.RegisterTypeForNavigation<ItemsPage>("ItemsPage");
-            Container.RegisterTypeForNavigation<ItemDetailPage>("ItemDetailPage");
+            Container.RegisterTypeForNavigation<MainPage>("MainPage");
+            Container.RegisterTypeForNavigation<DetailPage>("DetailPage");
         }
     }
 }

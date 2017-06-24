@@ -3,9 +3,9 @@ using Prism.Navigation;
 
 namespace HackXamarin.ViewModels
 {
-    public class ItemDetailPageViewModel : ViewModelBase
+    public class DetailPageViewModel : ViewModelBase
     {
-        public ItemDetailPageViewModel(INavigationService navigationService) : base(navigationService)
+        public DetailPageViewModel(INavigationService navigationService) : base(navigationService)
         {
         }
 

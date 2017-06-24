@@ -11,12 +11,12 @@ using Xamarin.Forms;
 
 namespace HackXamarin.ViewModels
 {
-    public class ItemsPageViewModel : ViewModelBase
+    public class MainPageViewModel : ViewModelBase
     {
         public ObservableRangeCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
-        public ItemsPageViewModel(INavigationService navigationService) : base(navigationService)
+        public MainPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             this.PropertyChanged += OnPropertyChanged;
             Title = "Browse";
@@ -37,7 +37,7 @@ namespace HackXamarin.ViewModels
         {
             if (e.PropertyName == nameof(SelectedItem) && SelectedItem != null)
             {
-                var name = "ItemDetailPage?id=" + SelectedItem.Id;
+                var name = "DetailPage?id=" + SelectedItem.Id;
                 SelectedItem = null;
                 NavigationService.NavigateAsync(name);
             }
